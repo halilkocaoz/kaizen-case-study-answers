@@ -14,8 +14,8 @@ public class HelpersTest
         var codes = new List<string>();
         for (var i = 0; i < mustCount; i++)
         {
-            var id = Helpers.GenerateCode();
-            codes.Add(id);
+            var code = Helpers.GenerateCode();
+            codes.Add(code);
         }
         var uniqueCodes = codes.Distinct().ToList();
         Assert.AreEqual(mustCount, uniqueCodes.Count);
@@ -28,8 +28,8 @@ public class HelpersTest
         var codes = new List<string>();
         for (var i = 0; i < mustCount; i++)
         {
-            var id = Helpers.GenerateCode();
-            codes.Add(id);
+            var code = Helpers.GenerateCode();
+            codes.Add(code);
         }
         var uniqueCodes = codes.Distinct().ToList();
         Assert.AreEqual(mustCount, uniqueCodes.Count);
@@ -42,8 +42,8 @@ public class HelpersTest
         var codes = new List<string>();
         for (var i = 0; i < mustCount; i++)
         {
-            var id = Helpers.GenerateCode();
-            codes.Add(id);
+            var code = Helpers.GenerateCode();
+            codes.Add(code);
         }
         var uniqueCodes = codes.Distinct().ToList();
         Assert.AreEqual(mustCount, uniqueCodes.Count);
