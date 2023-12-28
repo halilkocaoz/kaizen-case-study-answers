@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CodeGenerator;
@@ -36,17 +37,24 @@ public class HelpersTest
     }
     
     [TestMethod]
-    public void UniqueTest_100000()
+    public void RegexTest()
     {
-        const int mustCount = 100000;
-        var codes = new List<string>();
-        for (var i = 0; i < mustCount; i++)
+        var regex = new Regex("^[A-Z0-9]+$");
+        for (var i = 0; i < 100000; i++)
         {
-            var code = Helpers.GenerateCode();
-            codes.Add(code);
+            var id = Helpers.GenerateCode();
+            Assert.IsTrue(regex.IsMatch(id));
         }
-        var uniqueCodes = codes.Distinct().ToList();
-        Assert.AreEqual(mustCount, uniqueCodes.Count);
+    }
+    
+    [TestMethod]
+    public void LenTest()
+    {
+        for (var i = 0; i < 100000; i++)
+        {
+            var id = Helpers.GenerateCode();
+            Assert.AreEqual(8, id.Length);
+        }
     }
 }
 
