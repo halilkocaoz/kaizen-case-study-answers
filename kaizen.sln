@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGenerator", "CodeGenerator\CodeGenerator.csproj", "{56FE17A3-3325-4A89-B2C0-1BAC2350805D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiptParse", "ReceiptParse\ReceiptParse.csproj", "{56CB4310-CCA7-4531-9A46-5A0ECEC65F78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{56FE17A3-3325-4A89-B2C0-1BAC2350805D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56FE17A3-3325-4A89-B2C0-1BAC2350805D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56FE17A3-3325-4A89-B2C0-1BAC2350805D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CB4310-CCA7-4531-9A46-5A0ECEC65F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CB4310-CCA7-4531-9A46-5A0ECEC65F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CB4310-CCA7-4531-9A46-5A0ECEC65F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CB4310-CCA7-4531-9A46-5A0ECEC65F78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
