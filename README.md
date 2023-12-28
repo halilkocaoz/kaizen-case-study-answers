@@ -8,3 +8,13 @@
 - UniqueTest_10000
 - RegexTest
 - LenTest
+
+## ReceiptParse
+
+[ReceiptParse](/ReceiptParse/ReceiptParser.cs) seperates receipt lines using two flows. First, groups receipt items based on their average Y coordinates and gets a sorted list of these items. Seconds, segments items that obtained from first flow into lines based on a specified threshold value for the vertical distance between items, returns these lines as groups of items.
+
+I couldn't write test cases because I didn't have the more data.
+
+You can reach the [first parsing attempt result](/ReceiptParse/first-parsing-attempt.txt), and [final result](/ReceiptParse/parsed.txt).
+
+## Thanks for taking time to review
