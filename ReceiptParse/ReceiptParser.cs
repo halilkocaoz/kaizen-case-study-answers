@@ -27,6 +27,17 @@ public static class ReceiptParser
 {
     public static List<string> GetLines(string jsonString)
     {
-        return new List<string>();
+        var invoiceObjects = JsonSerializer.Deserialize<List<ReceiptItem>>(jsonString);
+        invoiceObjects!.RemoveAt(0);
+
+        var groupedInvoiceObjects = invoiceObjects.GroupBy(x =>
+        {
+            var averageY = x.BoundingPoly.Vertices.Sum(v => v.Y) / x.BoundingPoly.Vertices.Count;
+            var roundedY = Math.Round(averageY / 10.0) * 10;
+            return roundedY;
+        }).OrderBy(x => x.Key);
+
+        var lines = groupedInvoiceObjects.Select(x => string.Join(" ", x.Select(y => y.Description))).ToList();
+        return lines;
     }
 }
