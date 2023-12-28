@@ -10,6 +10,6 @@ public static class Helpers
         var bytes = new byte[4];
         using var rng = RandomNumberGenerator.Create();
         rng.GetBytes(bytes);
-        return BitConverter.ToString(bytes).Replace("-", string.Empty).ToLower();
+        return BitConverter.ToString(bytes).Replace("-", string.Empty);
     }
 }
